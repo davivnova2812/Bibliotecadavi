@@ -7,6 +7,15 @@
     <fragment
         android:id="@+id/bookSearchFragment"
         android:name="com.davi.myapplication.BookSearchFragment"
-        android:label="Busca de livros" />
+        android:label="Busca de livros">
 
+        <action
+            android:id="@+id/action_bookSearch_to_register"
+            app:destination="@id/bookRegisterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookRegisterFragment"
+        android:name="com.davi.myapplication.BookRegisterFragment"
+        android:label="Registrar Livro" />
 </navigation>
