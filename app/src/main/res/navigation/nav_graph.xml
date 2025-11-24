@@ -4,6 +4,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/bookSearchFragment">
 
+    <!-- Tela 1: Busca de livros -->
     <fragment
         android:id="@+id/bookSearchFragment"
         android:name="com.davi.myapplication.BookSearchFragment"
@@ -14,8 +15,26 @@
             app:destination="@id/bookRegisterFragment" />
     </fragment>
 
+    <!-- Tela 2: Registrar livro -->
     <fragment
         android:id="@+id/bookRegisterFragment"
         android:name="com.davi.myapplication.BookRegisterFragment"
-        android:label="Registrar Livro" />
+        android:label="Registrar Livro">
+
+        <action
+            android:id="@+id/action_register_to_addCopy"
+            app:destination="@id/bookCopyAddFragment" />
+    </fragment>
+
+    <!-- Tela 3: Novo exemplar -->
+    <fragment
+        android:id="@+id/bookCopyAddFragment"
+        android:name="com.davi.myapplication.BookCopyAddFragment"
+        android:label="Adicionar Exemplar" />
+
+    <!-- Tela 4: Editar livro (ainda vamos ligar depois) -->
+    <fragment
+        android:id="@+id/bookEditFragment"
+        android:name="com.davi.myapplication.BookEditFragment"
+        android:label="Editar Livro" />
 </navigation>
